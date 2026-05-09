@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+}
+
+.list-container {
+  width: 95%;
+  max-width: 1300px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease;
+}
+
+.list-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0f172a;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 950px;
+}
+
+thead {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+}
+
+thead th {
+  color: #ffffff;
+  padding: 16px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: 0.3s ease;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+tbody td {
+  padding: 16px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  margin-right: 10px;
+}
+
+.edit-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+}
+
+.error-msg {
+  text-align: center;
+  color: #dc2626;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.list-container p {
+  text-align: center;
+  font-size: 18px;
+  color: #475569;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .list-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .list-container h2 {
+    font-size: 28px;
+  }
+
+  table {
+    min-width: 800px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+}
